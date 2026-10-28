@@ -21,15 +21,23 @@ Proje, endüstriyel ortamlardaki kritik emniyet-güvenlik etkileşimlerini ele a
 
 ## 📁 Repository Yapısı ve Laboratuvar Modülleri
 
-| Modül | Odak Alanı | Temel Çıktı / Deliverable |
-| :--- | :--- | :--- |
-| **Lab 1** | Emniyet Mimarisi (Safety Architecture) | Emniyet Fonksiyon Haritası (`Emergency Shutdown`, `STO`, Bağımsız Termokupllar) |
-| **Lab 2** | IEC 62443 Mini Atölyesi | Bölge ve Geçiş (Zone & Conduit) Diyagramı (Zone 0/1 OT ile Zone 2 IT İzolasyonu) |
-| **Lab 3** | Tehdit ve Risk Matrisi | Risk Sicili (Termal-toksik tehlikelere odaklanan 18 puanlık Kritik Senaryo) |
-| **Lab 4** | Güvenli Uzaktan Erişim | Güvenli Mimari (Jump Server, MFA, VPN, Kişisel Hesaplar, Varsayılan Kapalı Portlar) |
-| **Lab 5** | SBOM, CVE ve Yama Yönetimi | Zafiyet Kararı (Termal şoka yol açmadan CVSS 9.8 açıklarının güvenli yönetimi) |
-| **Lab 6** | CRA Olay Simülasyonu | Olay Müdahale İş Akışı (EP 13: 15 dk triyaj, 2 saat izolasyon, 24s/72s AB CRA raporlaması) |
-| **Lab 7** | Yapay Zekâ Güvenlik Sınavı | YZ Fail-Safe Kararları (`Human Override`, `Plausibility Check`, `Fallback`) |
+| No | Siber Emniyet Başlığı | İlgili Lab | Projedeki Uygulama / Karşılığı |
+| :---: | :--- | :---: | :--- |
+| **01** | **Asset Inventory** *(Varlık Envanteri)* | **Lab 2** | Fırın içi PLC, HMI panelleri, vakum pompaları ve PID ısıtma eşanjörlerinin envanteri. |
+| **02** | **Network Architecture** *(Ağ Mimarisi)* | **Lab 2 & 4** | OT (Operasyonel Teknoloji) saha ağının topoloji ve haberleşme hatları şeması. |
+| **03** | **Safety Functions** *(Emniyet Fonksiyonları)* | **Lab 1** | Acil durdurma (`Emergency Shutdown`), `STO` ve bağımsız emniyet termokupl hatları. |
+| **04** | **Cyber Risk Assessment** *(Siber Risk Analizi)* | **Lab 3 & 4** | $S=3$ ölümcül risk kriterine göre optimize edilmiş 18 puanlık Kritik Risk Sicili. |
+| **05** | **Zone & Conduit** *(Bölge ve Geçişler)* | **Lab 2 & 4** | Saha seviyesi (Zone 0/1 OT) ile dış dünya (Zone 2 IT) arası segmentasyon. |
+| **06** | **Remote Access Procedure** *(Uzak Erişim)* | **Lab 4** | Şifreli VPN, Jump Server, MFA ve varsayılan kapalı port kuralları. |
+| **07** | **User / Role Matrix** *(Kullanıcı Rol Matrisi)* | **Lab 4** | Operatör, servis mühendisi ve sistem yöneticisi yetki sınırlandırmaları. |
+| **08** | **Software / Firmware Inv.** *(Yazılım Env.)* | **Lab 5** | PLC Real-Time OS ve gömülü protokol yığımlarının sürüm envanteri. |
+| **09** | **SBOM** *(Yazılım Malzeme Listesi)* | **Lab 5** | 7 sütunlu standartlara tam uyumlu (Bileşen, Sürüm, Tedarikçi vb.) SBOM tablosu. |
+| **10** | **Vulnerability Records** *(Zafiyet Kayıtları)* | **Lab 5** | `Component X` v2.4 üzerindeki CVE / CVSS 9.8 kritik zafiyet kayıtları. |
+| **11** | **Patch / Update Records** *(Yama Kayıtları)* | **Lab 5** | Canlı sistemde termal şoka yol açmamak için **Dijital İkiz** ortamında yapılan yama testleri. |
+| **12** | **Backup & Restore** *(Yedekleme & Geri Yükleme)*| **Lab 6** | PLC parametrelerinin, PID set-point değerlerinin ve sistem imajlarının yedekleme planı. |
+| **13** | **Incident Response** *(Olay Müdahale)* | **Lab 6** | *EP 13 İş Akışı:* 15 dk kritik triyaj (RAM log koruma), 2s izolasyon ve 24s/72s CRA bildirimleri. |
+| **14** | **Change Management** *(Değişim Yönetimi)* | **Lab 6** | Fırın PID rampa ve sıcaklık set-point değişikliklerinde onay ve kayıt prosedürleri. |
+| **15** | **Verification / Test** *(Doğrulama ve Test)* | **Lab 7** | YZ tabanlı süreçlerde *Human Override*, *Plausibility Check* ve emniyet doğrulama testleri. |
 
 ---
 
